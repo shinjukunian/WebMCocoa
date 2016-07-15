@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char VPXVersionString[];
 
 
 #import "VPXEncoder.h"
+#import "VPXDecoder.h"

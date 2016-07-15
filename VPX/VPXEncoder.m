@@ -286,15 +286,15 @@ static int encode_frame(vpx_codec_ctx_t *codec,
         got_pkts = 1;
         
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
-            const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
+            //const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
             if (!vpx_video_writer_write_frame(writer,
                                               pkt->data.frame.buf,
                                               pkt->data.frame.sz,
                                               pkt->data.frame.pts)) {
                 die_codec(codec, "Failed to write compressed frame");
             }
-            printf(keyframe ? "K" : ".");
-            fflush(stdout);
+//            printf(keyframe ? "K" : ".");
+//            fflush(stdout);
         }
     }
     
