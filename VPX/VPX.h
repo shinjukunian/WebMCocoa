@@ -6,7 +6,7 @@
 //  Copyright © 2016 telethon k.k. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for VPX.
 FOUNDATION_EXPORT double VPXVersionNumber;
@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char VPXVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <VPX/PublicHeader.h>
 
 
+#import "VPXEncoder.h"

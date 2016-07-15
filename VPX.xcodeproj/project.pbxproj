@@ -8,12 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		B774B2951D365145005032A8 /* VPX.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2931D365145005032A8 /* VPX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B774B29C1D365156005032A8 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B774B29B1D365156005032A8 /* libvpx.a */; };
+		B774B29F1D36516C005032A8 /* vpx_config.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B29D1D36516C005032A8 /* vpx_config.h */; };
+		B774B2A01D36516C005032A8 /* vpx_version.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B29E1D36516C005032A8 /* vpx_version.h */; };
+		B774B2BE1D365360005032A8 /* vpx in Resources */ = {isa = PBXBuildFile; fileRef = B774B2BD1D365360005032A8 /* vpx */; };
+		B774B2C11D36537F005032A8 /* tools_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2BF1D36537F005032A8 /* tools_common.c */; };
+		B774B2C21D36537F005032A8 /* tools_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2C01D36537F005032A8 /* tools_common.h */; };
+		B774B2C41D36539B005032A8 /* vpx_ports in Resources */ = {isa = PBXBuildFile; fileRef = B774B2C31D36539B005032A8 /* vpx_ports */; };
+		B774B2C71D3653A9005032A8 /* y4minput.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2C51D3653A9005032A8 /* y4minput.c */; };
+		B774B2C81D3653A9005032A8 /* y4minput.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2C61D3653A9005032A8 /* y4minput.h */; };
+		B774B2CB1D3653BC005032A8 /* video_writer.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2C91D3653BC005032A8 /* video_writer.c */; };
+		B774B2CC1D3653BC005032A8 /* video_writer.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2CA1D3653BC005032A8 /* video_writer.h */; };
+		B774B2CF1D3653E2005032A8 /* ivfenc.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2CD1D3653E2005032A8 /* ivfenc.c */; };
+		B774B2D01D3653E2005032A8 /* ivfenc.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2CE1D3653E2005032A8 /* ivfenc.h */; };
+		B774B2D21D3653F7005032A8 /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D11D3653F7005032A8 /* video_common.h */; };
+		B774B2D61D3654A1005032A8 /* VPXEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D41D3654A1005032A8 /* VPXEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B774B2D71D3654A1005032A8 /* VPXEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B774B2D51D3654A1005032A8 /* VPXEncoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B774B2901D365145005032A8 /* VPX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPX.h; sourceTree = "<group>"; };
+		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VPX.h; path = VPX/VPX.h; sourceTree = "<group>"; };
 		B774B2941D365145005032A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B774B29B1D365156005032A8 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvpx.a; sourceTree = "<group>"; };
+		B774B29D1D36516C005032A8 /* vpx_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_config.h; sourceTree = "<group>"; };
+		B774B29E1D36516C005032A8 /* vpx_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_version.h; sourceTree = "<group>"; };
+		B774B2AF1D3651F9005032A8 /* simple_encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = simple_encoder.c; sourceTree = "<group>"; };
+		B774B2BD1D365360005032A8 /* vpx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx; sourceTree = "<group>"; };
+		B774B2BF1D36537F005032A8 /* tools_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tools_common.c; sourceTree = "<group>"; };
+		B774B2C01D36537F005032A8 /* tools_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools_common.h; sourceTree = "<group>"; };
+		B774B2C31D36539B005032A8 /* vpx_ports */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx_ports; sourceTree = "<group>"; };
+		B774B2C51D3653A9005032A8 /* y4minput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = y4minput.c; sourceTree = "<group>"; };
+		B774B2C61D3653A9005032A8 /* y4minput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = y4minput.h; sourceTree = "<group>"; };
+		B774B2C91D3653BC005032A8 /* video_writer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = video_writer.c; sourceTree = "<group>"; };
+		B774B2CA1D3653BC005032A8 /* video_writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_writer.h; sourceTree = "<group>"; };
+		B774B2CD1D3653E2005032A8 /* ivfenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ivfenc.c; sourceTree = "<group>"; };
+		B774B2CE1D3653E2005032A8 /* ivfenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ivfenc.h; sourceTree = "<group>"; };
+		B774B2D11D3653F7005032A8 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		B774B2D41D3654A1005032A8 /* VPXEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder.h; path = VPX/VPXEncoder.h; sourceTree = "<group>"; };
+		B774B2D51D3654A1005032A8 /* VPXEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPXEncoder.m; path = VPX/VPXEncoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B774B29C1D365156005032A8 /* libvpx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +64,10 @@
 		B774B2861D365145005032A8 = {
 			isa = PBXGroup;
 			children = (
+				B774B2E21D366967005032A8 /* libYUV */,
+				B774B2931D365145005032A8 /* VPX.h */,
+				B774B2D41D3654A1005032A8 /* VPXEncoder.h */,
+				B774B2D51D3654A1005032A8 /* VPXEncoder.m */,
 				B774B2921D365145005032A8 /* VPX */,
 				B774B2911D365145005032A8 /* Products */,
 			);
@@ -46,10 +84,31 @@
 		B774B2921D365145005032A8 /* VPX */ = {
 			isa = PBXGroup;
 			children = (
-				B774B2931D365145005032A8 /* VPX.h */,
+				B774B2D11D3653F7005032A8 /* video_common.h */,
+				B774B2CD1D3653E2005032A8 /* ivfenc.c */,
+				B774B2CE1D3653E2005032A8 /* ivfenc.h */,
+				B774B2C91D3653BC005032A8 /* video_writer.c */,
+				B774B2CA1D3653BC005032A8 /* video_writer.h */,
+				B774B2C51D3653A9005032A8 /* y4minput.c */,
+				B774B2C61D3653A9005032A8 /* y4minput.h */,
+				B774B2C31D36539B005032A8 /* vpx_ports */,
+				B774B2BF1D36537F005032A8 /* tools_common.c */,
+				B774B2C01D36537F005032A8 /* tools_common.h */,
+				B774B2BD1D365360005032A8 /* vpx */,
+				B774B2AF1D3651F9005032A8 /* simple_encoder.c */,
+				B774B29D1D36516C005032A8 /* vpx_config.h */,
+				B774B29E1D36516C005032A8 /* vpx_version.h */,
 				B774B2941D365145005032A8 /* Info.plist */,
+				B774B29B1D365156005032A8 /* libvpx.a */,
 			);
 			path = VPX;
+			sourceTree = "<group>";
+		};
+		B774B2E21D366967005032A8 /* libYUV */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libYUV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +118,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B774B2D01D3653E2005032A8 /* ivfenc.h in Headers */,
 				B774B2951D365145005032A8 /* VPX.h in Headers */,
+				B774B2CC1D3653BC005032A8 /* video_writer.h in Headers */,
+				B774B2D21D3653F7005032A8 /* video_common.h in Headers */,
+				B774B2C21D36537F005032A8 /* tools_common.h in Headers */,
+				B774B2D61D3654A1005032A8 /* VPXEncoder.h in Headers */,
+				B774B29F1D36516C005032A8 /* vpx_config.h in Headers */,
+				B774B2A01D36516C005032A8 /* vpx_version.h in Headers */,
+				B774B2C81D3653A9005032A8 /* y4minput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B774B2C41D36539B005032A8 /* vpx_ports in Resources */,
+				B774B2BE1D365360005032A8 /* vpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B774B2C71D3653A9005032A8 /* y4minput.c in Sources */,
+				B774B2C11D36537F005032A8 /* tools_common.c in Sources */,
+				B774B2D71D3654A1005032A8 /* VPXEncoder.m in Sources */,
+				B774B2CF1D3653E2005032A8 /* ivfenc.c in Sources */,
+				B774B2CB1D3653BC005032A8 /* video_writer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +314,10 @@
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPX",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -258,6 +336,10 @@
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPX",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -283,6 +365,7 @@
 				B774B29A1D365145005032A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
