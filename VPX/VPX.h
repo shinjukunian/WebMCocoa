@@ -17,5 +17,5 @@ FOUNDATION_EXPORT const unsigned char VPXVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <VPX/PublicHeader.h>
 
 
-#import "VPXEncoder.h"
+#import "VPXEncoder2.h"
 #import "VPXDecoder.h"
