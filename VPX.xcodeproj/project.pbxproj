@@ -13,12 +13,13 @@
 		B72F91C31D38E3D0000B82BD /* video_reader.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F91C11D38E3D0000B82BD /* video_reader.h */; };
 		B72F91C61D38E3FD000B82BD /* ivfdec.c in Sources */ = {isa = PBXBuildFile; fileRef = B72F91C41D38E3FD000B82BD /* ivfdec.c */; };
 		B72F91C71D38E3FD000B82BD /* ivfdec.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F91C51D38E3FD000B82BD /* ivfdec.h */; };
-		B72FF47A1D3CC4CD00EF85E2 /* libwebm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF46B1D3CC4BB00EF85E2 /* libwebm.a */; };
 		B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */ = {isa = PBXBuildFile; fileRef = B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */ = {isa = PBXBuildFile; fileRef = B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */; };
 		B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */; };
-		B72FF4931D3DB65000EF85E2 /* libmkvmuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4611D3CC4BB00EF85E2 /* libmkvmuxer.a */; };
-		B72FF4941D3DB66D00EF85E2 /* libmkvparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4631D3CC4BB00EF85E2 /* libmkvparser.a */; };
+		B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */; };
+		B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */; };
+		B7706D031D3E266D00BE5D56 /* libwebm_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */; };
+		B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706D001D3E266D00BE5D56 /* libwebm.a */; };
 		B774B2951D365145005032A8 /* VPX.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2931D365145005032A8 /* VPX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B774B29C1D365156005032A8 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B774B29B1D365156005032A8 /* libvpx.a */; };
 		B774B29F1D36516C005032A8 /* vpx_config.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B29D1D36516C005032A8 /* vpx_config.h */; };
@@ -32,109 +33,7 @@
 		B774B2CF1D3653E2005032A8 /* ivfenc.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2CD1D3653E2005032A8 /* ivfenc.c */; };
 		B774B2D01D3653E2005032A8 /* ivfenc.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2CE1D3653E2005032A8 /* ivfenc.h */; };
 		B774B2D21D3653F7005032A8 /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D11D3653F7005032A8 /* video_common.h */; };
-		B774B2D61D3654A1005032A8 /* VPXEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D41D3654A1005032A8 /* VPXEncoder.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B72FF45E1D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3EDAE4D66D8E40D4BC43D2FF;
-			remoteInfo = dumpvtt;
-		};
-		B72FF4601D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2EA3582380B9485EA0AEF2EC;
-			remoteInfo = mkvmuxer;
-		};
-		B72FF4621D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BE70DF978373425BBFDD7CFE;
-			remoteInfo = mkvparser;
-		};
-		B72FF4641D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DB6C52EAC4364B02B6CDA39E;
-			remoteInfo = sample;
-		};
-		B72FF4661D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07A56EF2D7C2407C83959C6D;
-			remoteInfo = sample_muxer;
-		};
-		B72FF4681D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0AEDC88C3B974FDF806B27AB;
-			remoteInfo = vttdemux;
-		};
-		B72FF46A1D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C0896BC5D71A43078481922C;
-			remoteInfo = webm;
-		};
-		B72FF46C1D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05CDBB1F43BE43E89E90A2C4;
-			remoteInfo = webm2pes;
-		};
-		B72FF46E1D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4C383D43206F4FC7926B12CC;
-			remoteInfo = webm2ts;
-		};
-		B72FF4701D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B46857652ABE437BA386E4E3;
-			remoteInfo = webm_info;
-		};
-		B72FF4721D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7AFCDB6F189743C1866CB63E;
-			remoteInfo = webm_parser;
-		};
-		B72FF4741D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AEFE0ABFD98D4FCC960BB0D1;
-			remoteInfo = webm_parser_demo;
-		};
-		B72FF4761D3CC4BB00EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 15CC2EDF78B24E56825C66AB;
-			remoteInfo = webmts;
-		};
-		B72FF4781D3CC4C500EF85E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FB4B647D6FC4474F87870320;
-			remoteInfo = webm;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B72F91BC1D38E369000B82BD /* VPXDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXDecoder.h; path = VPX/VPXDecoder.h; sourceTree = "<group>"; };
@@ -143,17 +42,19 @@
 		B72F91C11D38E3D0000B82BD /* video_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_reader.h; sourceTree = "<group>"; };
 		B72F91C41D38E3FD000B82BD /* ivfdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ivfdec.c; sourceTree = "<group>"; };
 		B72F91C51D38E3FD000B82BD /* ivfdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ivfdec.h; sourceTree = "<group>"; };
-		B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIBWEBM.xcodeproj; path = "../../../Downloads/libwebm-master/build/LIBWEBM.xcodeproj"; sourceTree = "<group>"; };
 		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder2.h; path = VPX/VPXEncoder2.h; sourceTree = "<group>"; };
 		B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VPXEncoder2.mm; path = VPX/VPXEncoder2.mm; sourceTree = "<group>"; };
 		B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvmuxer.a; sourceTree = "<group>"; };
+		B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvparser.a; sourceTree = "<group>"; };
+		B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm_parser.a; sourceTree = "<group>"; };
+		B7706D001D3E266D00BE5D56 /* libwebm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm.a; sourceTree = "<group>"; };
 		B774B2901D365145005032A8 /* VPX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VPX.h; path = VPX/VPX.h; sourceTree = "<group>"; };
 		B774B2941D365145005032A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B774B29B1D365156005032A8 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvpx.a; sourceTree = "<group>"; };
 		B774B29D1D36516C005032A8 /* vpx_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_config.h; sourceTree = "<group>"; };
 		B774B29E1D36516C005032A8 /* vpx_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_version.h; sourceTree = "<group>"; };
-		B774B2AF1D3651F9005032A8 /* simple_encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = simple_encoder.c; sourceTree = "<group>"; };
 		B774B2BD1D365360005032A8 /* vpx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx; sourceTree = "<group>"; };
 		B774B2BF1D36537F005032A8 /* tools_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tools_common.c; sourceTree = "<group>"; };
 		B774B2C01D36537F005032A8 /* tools_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools_common.h; sourceTree = "<group>"; };
@@ -165,8 +66,6 @@
 		B774B2CD1D3653E2005032A8 /* ivfenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ivfenc.c; sourceTree = "<group>"; };
 		B774B2CE1D3653E2005032A8 /* ivfenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ivfenc.h; sourceTree = "<group>"; };
 		B774B2D11D3653F7005032A8 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
-		B774B2D41D3654A1005032A8 /* VPXEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder.h; path = VPX/VPXEncoder.h; sourceTree = "<group>"; };
-		B774B2D51D3654A1005032A8 /* VPXEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPXEncoder.m; path = VPX/VPXEncoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,37 +73,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B72FF4941D3DB66D00EF85E2 /* libmkvparser.a in Frameworks */,
-				B72FF4931D3DB65000EF85E2 /* libmkvmuxer.a in Frameworks */,
 				B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */,
-				B72FF47A1D3CC4CD00EF85E2 /* libwebm.a in Frameworks */,
+				B7706D031D3E266D00BE5D56 /* libwebm_parser.a in Frameworks */,
+				B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */,
+				B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */,
 				B774B29C1D365156005032A8 /* libvpx.a in Frameworks */,
+				B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B72FF44D1D3CC4BA00EF85E2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B72FF45F1D3CC4BB00EF85E2 /* dumpvtt */,
-				B72FF4611D3CC4BB00EF85E2 /* libmkvmuxer.a */,
-				B72FF4631D3CC4BB00EF85E2 /* libmkvparser.a */,
-				B72FF4651D3CC4BB00EF85E2 /* sample */,
-				B72FF4671D3CC4BB00EF85E2 /* sample_muxer */,
-				B72FF4691D3CC4BB00EF85E2 /* vttdemux */,
-				B72FF46B1D3CC4BB00EF85E2 /* libwebm.a */,
-				B72FF46D1D3CC4BB00EF85E2 /* webm2pes */,
-				B72FF46F1D3CC4BB00EF85E2 /* webm2ts */,
-				B72FF4711D3CC4BB00EF85E2 /* webm_info */,
-				B72FF4731D3CC4BB00EF85E2 /* libwebm_parser.a */,
-				B72FF4751D3CC4BB00EF85E2 /* webm_parser_demo */,
-				B72FF4771D3CC4BB00EF85E2 /* libwebmts.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B72FF4821D3CD3F100EF85E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,15 +93,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7706CFC1D3E261A00BE5D56 /* WebM */ = {
+			isa = PBXGroup;
+			children = (
+				B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */,
+				B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */,
+				B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */,
+				B7706D001D3E266D00BE5D56 /* libwebm.a */,
+			);
+			name = WebM;
+			sourceTree = "<group>";
+		};
 		B774B2861D365145005032A8 = {
 			isa = PBXGroup;
 			children = (
-				B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */,
+				B7706CFC1D3E261A00BE5D56 /* WebM */,
 				B774B2931D365145005032A8 /* VPX.h */,
 				B72F91BC1D38E369000B82BD /* VPXDecoder.h */,
 				B72F91BD1D38E369000B82BD /* VPXDecoder.m */,
-				B774B2D41D3654A1005032A8 /* VPXEncoder.h */,
-				B774B2D51D3654A1005032A8 /* VPXEncoder.m */,
 				B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */,
 				B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */,
 				B774B2921D365145005032A8 /* VPX */,
@@ -256,7 +145,6 @@
 				B774B2BF1D36537F005032A8 /* tools_common.c */,
 				B774B2C01D36537F005032A8 /* tools_common.h */,
 				B774B2BD1D365360005032A8 /* vpx */,
-				B774B2AF1D3651F9005032A8 /* simple_encoder.c */,
 				B774B29D1D36516C005032A8 /* vpx_config.h */,
 				B774B29E1D36516C005032A8 /* vpx_version.h */,
 				B774B2941D365145005032A8 /* Info.plist */,
@@ -277,7 +165,6 @@
 				B774B2CC1D3653BC005032A8 /* video_writer.h in Headers */,
 				B774B2D21D3653F7005032A8 /* video_common.h in Headers */,
 				B774B2C21D36537F005032A8 /* tools_common.h in Headers */,
-				B774B2D61D3654A1005032A8 /* VPXEncoder.h in Headers */,
 				B72F91C31D38E3D0000B82BD /* video_reader.h in Headers */,
 				B72F91BE1D38E369000B82BD /* VPXDecoder.h in Headers */,
 				B774B29F1D36516C005032A8 /* vpx_config.h in Headers */,
@@ -298,12 +185,10 @@
 				B774B28B1D365145005032A8 /* Sources */,
 				B774B28C1D365145005032A8 /* Frameworks */,
 				B774B28D1D365145005032A8 /* Headers */,
-				B774B28E1D365145005032A8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B72FF4791D3CC4C500EF85E2 /* PBXTargetDependency */,
 			);
 			name = VPX;
 			productName = VPX;
@@ -337,122 +222,12 @@
 			mainGroup = B774B2861D365145005032A8;
 			productRefGroup = B774B2911D365145005032A8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B72FF44D1D3CC4BA00EF85E2 /* Products */;
-					ProjectRef = B72FF44C1D3CC4BA00EF85E2 /* LIBWEBM.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B774B28F1D365145005032A8 /* VPX */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B72FF45F1D3CC4BB00EF85E2 /* dumpvtt */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = dumpvtt;
-			remoteRef = B72FF45E1D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4611D3CC4BB00EF85E2 /* libmkvmuxer.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libmkvmuxer.a;
-			remoteRef = B72FF4601D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4631D3CC4BB00EF85E2 /* libmkvparser.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libmkvparser.a;
-			remoteRef = B72FF4621D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4651D3CC4BB00EF85E2 /* sample */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = sample;
-			remoteRef = B72FF4641D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4671D3CC4BB00EF85E2 /* sample_muxer */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = sample_muxer;
-			remoteRef = B72FF4661D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4691D3CC4BB00EF85E2 /* vttdemux */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = vttdemux;
-			remoteRef = B72FF4681D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF46B1D3CC4BB00EF85E2 /* libwebm.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libwebm.a;
-			remoteRef = B72FF46A1D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF46D1D3CC4BB00EF85E2 /* webm2pes */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = webm2pes;
-			remoteRef = B72FF46C1D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF46F1D3CC4BB00EF85E2 /* webm2ts */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = webm2ts;
-			remoteRef = B72FF46E1D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4711D3CC4BB00EF85E2 /* webm_info */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = webm_info;
-			remoteRef = B72FF4701D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4731D3CC4BB00EF85E2 /* libwebm_parser.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libwebm_parser.a;
-			remoteRef = B72FF4721D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4751D3CC4BB00EF85E2 /* webm_parser_demo */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = webm_parser_demo;
-			remoteRef = B72FF4741D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B72FF4771D3CC4BB00EF85E2 /* libwebmts.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libwebmts.a;
-			remoteRef = B72FF4761D3CC4BB00EF85E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXResourcesBuildPhase section */
-		B774B28E1D365145005032A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B774B28B1D365145005032A8 /* Sources */ = {
@@ -471,14 +246,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B72FF4791D3CC4C500EF85E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = webm;
-			targetProxy = B72FF4781D3CC4C500EF85E2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B774B2961D365145005032A8 /* Debug */ = {
@@ -576,20 +343,23 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../Downloads/libwebm-master\"/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libwebm-master\"/**";
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VPX",
+					"$(PROJECT_DIR)",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -602,20 +372,23 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../Downloads/libwebm-master\"/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libwebm-master\"/**";
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VPX",
+					"$(PROJECT_DIR)",
 				);
+				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

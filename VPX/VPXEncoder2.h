@@ -13,13 +13,10 @@
 
 
 @property BOOL preserveAlpha;
+@property CGColorRef backgroundColor;
 
 -(instancetype)initWithURL:(NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha;
-
-
 -(void)addFrame:(CGImageRef)frame atTime:(NSTimeInterval)time;
 -(void)finalizeWithCompletion:(void(^)(BOOL success))completion;
-
-
 
 @end
