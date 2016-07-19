@@ -28,6 +28,9 @@ static const char *exec_name;
     int frame_count;
     int keyframe_interval;
     
+    double elapsedTimeInSec;
+    
+    
     NSURL *outURL;
     
     mkvmuxer::MkvWriter mkvWriter;
@@ -45,7 +48,9 @@ static const char *exec_name;
         
         outURL=url;
         self.preserveAlpha=alpha;
-      
+        
+        elapsedTimeInSec=0;
+        
         vpx_codec_enc_cfg_t cfg;
         keyframe_interval=0;
         frame_count=0;
@@ -54,7 +59,7 @@ static const char *exec_name;
         
         const VpxInterface *encoder = NULL;
         const int fps = (int)rate;        // TODO(dkovalev) add command line argument
-        const int bitrate = 200;   // kbit/s TODO(dkovalev) add command line argument
+        const int bitrate = 1000;   // kbit/s TODO(dkovalev) add command line argument
         
         encoder = get_vpx_encoder_by_name("vp8");
         
@@ -71,8 +76,8 @@ static const char *exec_name;
         
         cfg.g_w = info.frame_width;
         cfg.g_h = info.frame_height;
-        cfg.g_timebase.num = info.time_base.numerator;
-        cfg.g_timebase.den = info.time_base.denominator;
+        cfg.g_timebase.num = 1;
+        cfg.g_timebase.den = 1000;
         cfg.rc_target_bitrate = bitrate;
         cfg.g_error_resilient =  0;
         
@@ -169,8 +174,8 @@ static const char *exec_name;
             flags |= VPX_EFLAG_FORCE_KF;
         }
         
-        encode_frameAlpha(&codec, image, &codec_alpha, image_alpha, frame_count++, flags, &(_muxer_segment));
-        
+        encode_frameAlpha(&codec, image, &codec_alpha, image_alpha, frame_count++, elapsedTimeInSec ,flags, &(_muxer_segment));
+        elapsedTimeInSec+=time;
        
         vpx_img_free(image);
         vpx_img_free(image_alpha);
@@ -241,7 +246,8 @@ static const char *exec_name;
         if (keyframe_interval > 0 && frame_count % keyframe_interval == 0){
             flags |= VPX_EFLAG_FORCE_KF;
         }
-        encode_frame(&codec, image, frame_count++, flags,&(_muxer_segment));
+        encode_frame(&codec, image, frame_count++, elapsedTimeInSec,flags,&(_muxer_segment));
+        elapsedTimeInSec+=time;
         vpx_img_free(image);
         free(YUV);
         CGImageRelease(resized);
@@ -258,7 +264,7 @@ static const char *exec_name;
 
 -(void)finalizeWithCompletion:(void(^)(BOOL success))completion{
     
-    while (encode_frame(&codec, NULL, -1, 0, &(_muxer_segment))) {};
+    while (encode_frame(&codec, NULL, -1,0, 0, &(_muxer_segment))) {};
     
     if (vpx_codec_destroy(&codec))
         die_codec(&codec, "Failed to destroy codec.");
@@ -290,6 +296,7 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
                              vpx_codec_ctx_t *codec_alpha,
                              vpx_image_t *img_alpha,
                              int frame_index,
+                             double presentationTime,
                              int flags,
                              mkvmuxer::Segment *segment) {
 
@@ -313,14 +320,14 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
         
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
             
-            
+            uint64_t pts=(uint64_t)(presentationTime*1e9);
            BOOL success= segment->AddFrameWithAdditional((const uint8_t*)pkt->data.frame.buf,
                                                   pkt->data.frame.sz,
                                                   (const uint8_t*)pkt_alpha->data.frame.buf,
                                                   pkt_alpha->data.frame.sz,
                                                   1, 1,
-                                                  pkt->data.frame.pts*1e8,
-            NO);
+                                                  pts,
+            flags & VPX_EFLAG_FORCE_KF);
             
            
             if (!success) {
@@ -340,6 +347,7 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
 static int encode_frame(vpx_codec_ctx_t *codec,
                          vpx_image_t *img,
                          int frame_index,
+                         double presentationTime,
                          int flags,
                          mkvmuxer::Segment *segment) {
     int got_pkts = 0;
@@ -357,8 +365,8 @@ static int encode_frame(vpx_codec_ctx_t *codec,
         got_pkts = 1;
         
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
-            
-            BOOL success= segment->AddFrame((const uint8_t*)pkt->data.frame.buf, pkt->data.frame.sz, 1, pkt->data.frame.pts*1e8, NO);
+             uint64_t pts=(uint64_t)(presentationTime*1e9);
+            BOOL success= segment->AddFrame((const uint8_t*)pkt->data.frame.buf, pkt->data.frame.sz, 1, pts, flags & VPX_EFLAG_FORCE_KF);
             
             
             if (!success) {
