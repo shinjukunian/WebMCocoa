@@ -9,16 +9,13 @@
 #import "VPXEncoder2.h"
 #import <Accelerate/Accelerate.h>
 
-#include "mkvparser.hpp"
-#include "mkvreader.hpp"
-
 #include "mkvmuxer.hpp"
 #include "mkvmuxerutil.hpp"
 #include "mkvwriter.hpp"
 
 #include "vpx/vpx_encoder.h"
 #include "./tools_common.h"
-#include "video_writer.h"
+#include "./video_common.h"
 
 static const char *exec_name;
 
