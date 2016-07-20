@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B72F91BE1D38E369000B82BD /* VPXDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B72F91BC1D38E369000B82BD /* VPXDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */ = {isa = PBXBuildFile; fileRef = B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */ = {isa = PBXBuildFile; fileRef = B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */; };
 		B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */; };
@@ -21,26 +20,22 @@
 		B774B2A01D36516C005032A8 /* vpx_version.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B29E1D36516C005032A8 /* vpx_version.h */; };
 		B774B2C11D36537F005032A8 /* tools_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2BF1D36537F005032A8 /* tools_common.c */; };
 		B774B2C21D36537F005032A8 /* tools_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2C01D36537F005032A8 /* tools_common.h */; };
-		B774B2D01D3653E2005032A8 /* ivfenc.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2CE1D3653E2005032A8 /* ivfenc.h */; };
 		B774B2D21D3653F7005032A8 /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D11D3653F7005032A8 /* video_common.h */; };
-		B7E5AE241D3E2AF2008E7DDE /* VPXDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F91BD1D38E369000B82BD /* VPXDecoder.m */; };
-		B7E5AE261D3E2B8E008E7DDE /* ivfenc.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2CD1D3653E2005032A8 /* ivfenc.c */; };
+		B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C333B71D3F75B2004681EF /* CoreGraphics.framework */; };
 		B7E5AE291D3E2BCF008E7DDE /* y4minput.c in Sources */ = {isa = PBXBuildFile; fileRef = B7E5AE271D3E2BCF008E7DDE /* y4minput.c */; };
 		B7E5AE2A1D3E2BCF008E7DDE /* y4minput.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E5AE281D3E2BCF008E7DDE /* y4minput.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B72F91BC1D38E369000B82BD /* VPXDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXDecoder.h; path = VPX/VPXDecoder.h; sourceTree = "<group>"; };
-		B72F91BD1D38E369000B82BD /* VPXDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPXDecoder.m; path = VPX/VPXDecoder.m; sourceTree = "<group>"; };
-		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder2.h; path = VPX/VPXEncoder2.h; sourceTree = "<group>"; };
-		B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VPXEncoder2.mm; path = VPX/VPXEncoder2.mm; sourceTree = "<group>"; };
+		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPXEncoder2.h; sourceTree = "<group>"; };
+		B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VPXEncoder2.mm; sourceTree = "<group>"; };
 		B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvmuxer.a; sourceTree = "<group>"; };
 		B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvparser.a; sourceTree = "<group>"; };
 		B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm_parser.a; sourceTree = "<group>"; };
 		B7706D001D3E266D00BE5D56 /* libwebm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm.a; sourceTree = "<group>"; };
 		B774B2901D365145005032A8 /* VPX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VPX.h; path = VPX/VPX.h; sourceTree = "<group>"; };
+		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPX.h; sourceTree = "<group>"; };
 		B774B2941D365145005032A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B774B29B1D365156005032A8 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvpx.a; sourceTree = "<group>"; };
 		B774B29D1D36516C005032A8 /* vpx_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_config.h; sourceTree = "<group>"; };
@@ -49,9 +44,8 @@
 		B774B2BF1D36537F005032A8 /* tools_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tools_common.c; sourceTree = "<group>"; };
 		B774B2C01D36537F005032A8 /* tools_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools_common.h; sourceTree = "<group>"; };
 		B774B2C31D36539B005032A8 /* vpx_ports */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx_ports; sourceTree = "<group>"; };
-		B774B2CD1D3653E2005032A8 /* ivfenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ivfenc.c; sourceTree = "<group>"; };
-		B774B2CE1D3653E2005032A8 /* ivfenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ivfenc.h; sourceTree = "<group>"; };
 		B774B2D11D3653F7005032A8 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		B7C333B71D3F75B2004681EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B7E5AE271D3E2BCF008E7DDE /* y4minput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = y4minput.c; sourceTree = "<group>"; };
 		B7E5AE281D3E2BCF008E7DDE /* y4minput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = y4minput.h; sourceTree = "<group>"; };
 		B7E5AE2B1D3E2C51008E7DDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -66,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */,
 				B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */,
 				B7706D031D3E266D00BE5D56 /* libwebm_parser.a in Frameworks */,
 				B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */,
@@ -81,6 +76,7 @@
 		B72FF4821D3CD3F100EF85E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7C333B71D3F75B2004681EF /* CoreGraphics.framework */,
 				B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */,
 			);
 			name = Frameworks;
@@ -105,8 +101,6 @@
 			children = (
 				B7706CFC1D3E261A00BE5D56 /* WebM */,
 				B774B2931D365145005032A8 /* VPX.h */,
-				B72F91BC1D38E369000B82BD /* VPXDecoder.h */,
-				B72F91BD1D38E369000B82BD /* VPXDecoder.m */,
 				B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */,
 				B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */,
 				B774B2921D365145005032A8 /* VPX */,
@@ -131,8 +125,6 @@
 				B7E5AE271D3E2BCF008E7DDE /* y4minput.c */,
 				B7E5AE281D3E2BCF008E7DDE /* y4minput.h */,
 				B774B2D11D3653F7005032A8 /* video_common.h */,
-				B774B2CD1D3653E2005032A8 /* ivfenc.c */,
-				B774B2CE1D3653E2005032A8 /* ivfenc.h */,
 				B774B2C31D36539B005032A8 /* vpx_ports */,
 				B774B2BF1D36537F005032A8 /* tools_common.c */,
 				B774B2C01D36537F005032A8 /* tools_common.h */,
@@ -152,12 +144,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B774B2D01D3653E2005032A8 /* ivfenc.h in Headers */,
 				B774B2951D365145005032A8 /* VPX.h in Headers */,
 				B774B2D21D3653F7005032A8 /* video_common.h in Headers */,
 				B774B2C21D36537F005032A8 /* tools_common.h in Headers */,
 				B7E5AE2A1D3E2BCF008E7DDE /* y4minput.h in Headers */,
-				B72F91BE1D38E369000B82BD /* VPXDecoder.h in Headers */,
 				B774B29F1D36516C005032A8 /* vpx_config.h in Headers */,
 				B774B2A01D36516C005032A8 /* vpx_version.h in Headers */,
 				B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */,
@@ -225,8 +215,6 @@
 			files = (
 				B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */,
 				B774B2C11D36537F005032A8 /* tools_common.c in Sources */,
-				B7E5AE241D3E2AF2008E7DDE /* VPXDecoder.m in Sources */,
-				B7E5AE261D3E2B8E008E7DDE /* ivfenc.c in Sources */,
 				B7E5AE291D3E2BCF008E7DDE /* y4minput.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

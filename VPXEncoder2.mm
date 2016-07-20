@@ -13,9 +13,9 @@
 #include "mkvmuxerutil.hpp"
 #include "mkvwriter.hpp"
 
-#include "vpx/vpx_encoder.h"
-#include "./tools_common.h"
-#include "./video_common.h"
+#include "VPX/vpx/vpx_encoder.h"
+#include "VPX/tools_common.h"
+#include "VPX/video_common.h"
 
 static const char *exec_name;
 
@@ -29,8 +29,7 @@ static const char *exec_name;
     int keyframe_interval;
     
     double elapsedTimeInSec;
-    
-    
+
     NSURL *outURL;
     
     mkvmuxer::MkvWriter mkvWriter;
