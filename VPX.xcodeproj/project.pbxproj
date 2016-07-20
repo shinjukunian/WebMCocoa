@@ -12,7 +12,6 @@
 		B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */; };
 		B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */; };
 		B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */; };
-		B7706D031D3E266D00BE5D56 /* libwebm_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */; };
 		B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706D001D3E266D00BE5D56 /* libwebm.a */; };
 		B774B2951D365145005032A8 /* VPX.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2931D365145005032A8 /* VPX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B774B29C1D365156005032A8 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B774B29B1D365156005032A8 /* libvpx.a */; };
@@ -30,10 +29,9 @@
 		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPXEncoder2.h; sourceTree = "<group>"; };
 		B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VPXEncoder2.mm; sourceTree = "<group>"; };
 		B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvmuxer.a; sourceTree = "<group>"; };
-		B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmkvparser.a; sourceTree = "<group>"; };
-		B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm_parser.a; sourceTree = "<group>"; };
-		B7706D001D3E266D00BE5D56 /* libwebm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebm.a; sourceTree = "<group>"; };
+		B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkvmuxer.a; path = WebM/libmkvmuxer.a; sourceTree = "<group>"; };
+		B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkvparser.a; path = WebM/libmkvparser.a; sourceTree = "<group>"; };
+		B7706D001D3E266D00BE5D56 /* libwebm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebm.a; path = WebM/libwebm.a; sourceTree = "<group>"; };
 		B774B2901D365145005032A8 /* VPX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B774B2931D365145005032A8 /* VPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPX.h; sourceTree = "<group>"; };
 		B774B2941D365145005032A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,13 +44,16 @@
 		B774B2C31D36539B005032A8 /* vpx_ports */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx_ports; sourceTree = "<group>"; };
 		B774B2D11D3653F7005032A8 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
 		B7C333B71D3F75B2004681EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B7C333BD1D3F789C004681EF /* common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = common; path = WebM/common; sourceTree = "<group>"; };
+		B7C333BE1D3F789C004681EF /* mkvmuxer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mkvmuxer; path = WebM/mkvmuxer; sourceTree = "<group>"; };
+		B7C333BF1D3F789C004681EF /* mkvparser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mkvparser; path = WebM/mkvparser; sourceTree = "<group>"; };
 		B7E5AE271D3E2BCF008E7DDE /* y4minput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = y4minput.c; sourceTree = "<group>"; };
 		B7E5AE281D3E2BCF008E7DDE /* y4minput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = y4minput.h; sourceTree = "<group>"; };
 		B7E5AE2B1D3E2C51008E7DDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B7E5AE2C1D3E2C51008E7DDE /* PATENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
-		B7E5AE2D1D3E2C77008E7DDE /* AUTHORS.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS.TXT; sourceTree = "<group>"; };
-		B7E5AE2E1D3E2C77008E7DDE /* LICENSE.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.TXT; sourceTree = "<group>"; };
-		B7E5AE2F1D3E2C77008E7DDE /* PATENTS.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS.TXT; sourceTree = "<group>"; };
+		B7E5AE2D1D3E2C77008E7DDE /* AUTHORS.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AUTHORS.TXT; path = WebM/AUTHORS.TXT; sourceTree = "<group>"; };
+		B7E5AE2E1D3E2C77008E7DDE /* LICENSE.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.TXT; path = WebM/LICENSE.TXT; sourceTree = "<group>"; };
+		B7E5AE2F1D3E2C77008E7DDE /* PATENTS.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PATENTS.TXT; path = WebM/PATENTS.TXT; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +63,6 @@
 			files = (
 				B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */,
 				B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */,
-				B7706D031D3E266D00BE5D56 /* libwebm_parser.a in Frameworks */,
 				B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */,
 				B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */,
 				B774B29C1D365156005032A8 /* libvpx.a in Frameworks */,
@@ -85,12 +85,14 @@
 		B7706CFC1D3E261A00BE5D56 /* WebM */ = {
 			isa = PBXGroup;
 			children = (
+				B7C333BD1D3F789C004681EF /* common */,
+				B7C333BE1D3F789C004681EF /* mkvmuxer */,
+				B7C333BF1D3F789C004681EF /* mkvparser */,
 				B7E5AE2D1D3E2C77008E7DDE /* AUTHORS.TXT */,
 				B7E5AE2E1D3E2C77008E7DDE /* LICENSE.TXT */,
 				B7E5AE2F1D3E2C77008E7DDE /* PATENTS.TXT */,
 				B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */,
 				B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */,
-				B7706CFF1D3E266D00BE5D56 /* libwebm_parser.a */,
 				B7706D001D3E266D00BE5D56 /* libwebm.a */,
 			);
 			name = WebM;
@@ -99,10 +101,10 @@
 		B774B2861D365145005032A8 = {
 			isa = PBXGroup;
 			children = (
-				B7706CFC1D3E261A00BE5D56 /* WebM */,
 				B774B2931D365145005032A8 /* VPX.h */,
 				B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */,
 				B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */,
+				B7706CFC1D3E261A00BE5D56 /* WebM */,
 				B774B2921D365145005032A8 /* VPX */,
 				B774B2911D365145005032A8 /* Products */,
 				B72FF4821D3CD3F100EF85E2 /* Frameworks */,
@@ -120,15 +122,15 @@
 		B774B2921D365145005032A8 /* VPX */ = {
 			isa = PBXGroup;
 			children = (
+				B774B2C31D36539B005032A8 /* vpx_ports */,
+				B774B2BD1D365360005032A8 /* vpx */,
 				B7E5AE2B1D3E2C51008E7DDE /* LICENSE */,
 				B7E5AE2C1D3E2C51008E7DDE /* PATENTS */,
 				B7E5AE271D3E2BCF008E7DDE /* y4minput.c */,
 				B7E5AE281D3E2BCF008E7DDE /* y4minput.h */,
 				B774B2D11D3653F7005032A8 /* video_common.h */,
-				B774B2C31D36539B005032A8 /* vpx_ports */,
 				B774B2BF1D36537F005032A8 /* tools_common.c */,
 				B774B2C01D36537F005032A8 /* tools_common.h */,
-				B774B2BD1D365360005032A8 /* vpx */,
 				B774B29D1D36516C005032A8 /* vpx_config.h */,
 				B774B29E1D36516C005032A8 /* vpx_version.h */,
 				B774B2941D365145005032A8 /* Info.plist */,
@@ -324,14 +326,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libwebm-master\"/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"/**",
+					"\"$(SRCROOT)/WebM\"/**",
+					"\"$(SRCROOT)/VPX\"/**",
+				);
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VPX",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 				);
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;
@@ -353,14 +358,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libwebm-master\"/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"/**",
+					"\"$(SRCROOT)/WebM\"/**",
+					"\"$(SRCROOT)/VPX\"/**",
+				);
 				INFOPLIST_FILE = VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VPX",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 				);
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPX;

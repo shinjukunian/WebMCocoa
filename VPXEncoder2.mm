@@ -9,9 +9,9 @@
 #import "VPXEncoder2.h"
 #import <Accelerate/Accelerate.h>
 
-#include "mkvmuxer.hpp"
-#include "mkvmuxerutil.hpp"
-#include "mkvwriter.hpp"
+#include "WebM/mkvmuxer/mkvmuxer.h"
+#include "WebM/mkvmuxer/mkvmuxerutil.h"
+#include "WebM/mkvmuxer/mkvwriter.h"
 
 #include "VPX/vpx/vpx_encoder.h"
 #include "VPX/tools_common.h"
