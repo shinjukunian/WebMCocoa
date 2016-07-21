@@ -20,6 +20,9 @@
 		B774B2C11D36537F005032A8 /* tools_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B774B2BF1D36537F005032A8 /* tools_common.c */; };
 		B774B2C21D36537F005032A8 /* tools_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2C01D36537F005032A8 /* tools_common.h */; };
 		B774B2D21D3653F7005032A8 /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B774B2D11D3653F7005032A8 /* video_common.h */; };
+		B777A2C11D3F822200F80A38 /* VPXiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B777A2BF1D3F822200F80A38 /* VPXiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B777A2C71D3F824A00F80A38 /* VPX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B777A2C51D3F824A00F80A38 /* VPX.framework */; };
+		B777A2C81D3F824A00F80A38 /* WebM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B777A2C61D3F824A00F80A38 /* WebM.framework */; };
 		B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C333B71D3F75B2004681EF /* CoreGraphics.framework */; };
 		B7E5AE291D3E2BCF008E7DDE /* y4minput.c in Sources */ = {isa = PBXBuildFile; fileRef = B7E5AE271D3E2BCF008E7DDE /* y4minput.c */; };
 		B7E5AE2A1D3E2BCF008E7DDE /* y4minput.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E5AE281D3E2BCF008E7DDE /* y4minput.h */; };
@@ -43,6 +46,11 @@
 		B774B2C01D36537F005032A8 /* tools_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools_common.h; sourceTree = "<group>"; };
 		B774B2C31D36539B005032A8 /* vpx_ports */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vpx_ports; sourceTree = "<group>"; };
 		B774B2D11D3653F7005032A8 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		B777A2BD1D3F822200F80A38 /* VPXiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPXiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B777A2BF1D3F822200F80A38 /* VPXiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPXiOS.h; sourceTree = "<group>"; };
+		B777A2C01D3F822200F80A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B777A2C51D3F824A00F80A38 /* VPX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VPX.framework; sourceTree = "<group>"; };
+		B777A2C61D3F824A00F80A38 /* WebM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebM.framework; sourceTree = "<group>"; };
 		B7C333B71D3F75B2004681EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B7C333BD1D3F789C004681EF /* common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = common; path = WebM/common; sourceTree = "<group>"; };
 		B7C333BE1D3F789C004681EF /* mkvmuxer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mkvmuxer; path = WebM/mkvmuxer; sourceTree = "<group>"; };
@@ -67,6 +75,15 @@
 				B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */,
 				B774B29C1D365156005032A8 /* libvpx.a in Frameworks */,
 				B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B777A2B91D3F822200F80A38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B777A2C71D3F824A00F80A38 /* VPX.framework in Frameworks */,
+				B777A2C81D3F824A00F80A38 /* WebM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +123,7 @@
 				B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */,
 				B7706CFC1D3E261A00BE5D56 /* WebM */,
 				B774B2921D365145005032A8 /* VPX */,
+				B777A2BE1D3F822200F80A38 /* VPX-iOS */,
 				B774B2911D365145005032A8 /* Products */,
 				B72FF4821D3CD3F100EF85E2 /* Frameworks */,
 			);
@@ -115,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B774B2901D365145005032A8 /* VPX.framework */,
+				B777A2BD1D3F822200F80A38 /* VPXiOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +158,17 @@
 			path = VPX;
 			sourceTree = "<group>";
 		};
+		B777A2BE1D3F822200F80A38 /* VPX-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B777A2C51D3F824A00F80A38 /* VPX.framework */,
+				B777A2C61D3F824A00F80A38 /* WebM.framework */,
+				B777A2BF1D3F822200F80A38 /* VPXiOS.h */,
+				B777A2C01D3F822200F80A38 /* Info.plist */,
+			);
+			path = "VPX-iOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,6 +183,14 @@
 				B774B29F1D36516C005032A8 /* vpx_config.h in Headers */,
 				B774B2A01D36516C005032A8 /* vpx_version.h in Headers */,
 				B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B777A2BA1D3F822200F80A38 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B777A2C11D3F822200F80A38 /* VPXiOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +214,24 @@
 			productReference = B774B2901D365145005032A8 /* VPX.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B777A2BC1D3F822200F80A38 /* VPXiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B777A2C41D3F822200F80A38 /* Build configuration list for PBXNativeTarget "VPXiOS" */;
+			buildPhases = (
+				B777A2B81D3F822200F80A38 /* Sources */,
+				B777A2B91D3F822200F80A38 /* Frameworks */,
+				B777A2BA1D3F822200F80A38 /* Headers */,
+				B777A2BB1D3F822200F80A38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPXiOS;
+			productName = "VPX-iOS";
+			productReference = B777A2BD1D3F822200F80A38 /* VPXiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +242,12 @@
 				ORGANIZATIONNAME = "telethon k.k.";
 				TargetAttributes = {
 					B774B28F1D365145005032A8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = DVQ96RL2KL;
+						DevelopmentTeamName = "telethon k.k.";
+						ProvisioningStyle = Automatic;
+					};
+					B777A2BC1D3F822200F80A38 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DVQ96RL2KL;
 						DevelopmentTeamName = "telethon k.k.";
@@ -206,9 +268,20 @@
 			projectRoot = "";
 			targets = (
 				B774B28F1D365145005032A8 /* VPX */,
+				B777A2BC1D3F822200F80A38 /* VPXiOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B777A2BB1D3F822200F80A38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B774B28B1D365145005032A8 /* Sources */ = {
@@ -218,6 +291,13 @@
 				B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */,
 				B774B2C11D36537F005032A8 /* tools_common.c in Sources */,
 				B7E5AE291D3E2BCF008E7DDE /* y4minput.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B777A2B81D3F822200F80A38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +457,59 @@
 			};
 			name = Release;
 		};
+		B777A2C21D3F822200F80A38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPX-iOS",
+				);
+				INFOPLIST_FILE = "VPX-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.telethon.VPX-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B777A2C31D3F822200F80A38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPX-iOS",
+				);
+				INFOPLIST_FILE = "VPX-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.telethon.VPX-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,6 +530,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B777A2C41D3F822200F80A38 /* Build configuration list for PBXNativeTarget "VPXiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B777A2C21D3F822200F80A38 /* Debug */,
+				B777A2C31D3F822200F80A38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
