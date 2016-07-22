@@ -51,14 +51,14 @@ static const char *exec_name;
         elapsedTimeInSec=0;
         
         vpx_codec_enc_cfg_t cfg;
-        keyframe_interval=0;
+        keyframe_interval=10;
         frame_count=0;
         vpx_codec_err_t res;
         VpxVideoInfo info = {0};
         
         const VpxInterface *encoder = NULL;
         const int fps = (int)rate;        // TODO(dkovalev) add command line argument
-        const int bitrate = 1000;   // kbit/s TODO(dkovalev) add command line argument
+        const int bitrate = 20000;   // kbit/s TODO(dkovalev) add command line argument
         
         encoder = get_vpx_encoder_by_name("vp8");
         
@@ -252,6 +252,8 @@ static const char *exec_name;
         CGImageRelease(resized);
 
     }
+    
+    frame_count+=1;
     CGColorSpaceRelease(colorSpace);
 }
 
@@ -305,11 +307,11 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
     const vpx_codec_cx_pkt_t *pkt = NULL;
     const vpx_codec_cx_pkt_t *pkt_alpha = NULL;
      vpx_codec_err_t res = vpx_codec_encode(codec, img, frame_index, 1,
-                                                 flags, VPX_DL_GOOD_QUALITY);
+                                                 flags, VPX_DL_BEST_QUALITY);
     if (res != VPX_CODEC_OK)
         die_codec(codec, "Failed to encode frame");
     res = vpx_codec_encode(codec_alpha, img_alpha, frame_index, 1,
-                                                 flags, VPX_DL_GOOD_QUALITY);
+                                                 flags, VPX_DL_BEST_QUALITY);
     
     if (res != VPX_CODEC_OK)
         die_codec(codec, "Failed to encode frame");
@@ -320,13 +322,14 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
             
             uint64_t pts=(uint64_t)(presentationTime*1e9);
+            const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
            BOOL success= segment->AddFrameWithAdditional((const uint8_t*)pkt->data.frame.buf,
                                                   pkt->data.frame.sz,
                                                   (const uint8_t*)pkt_alpha->data.frame.buf,
                                                   pkt_alpha->data.frame.sz,
                                                   1, 1,
                                                   pts,
-            flags & VPX_EFLAG_FORCE_KF);
+            keyframe);
             
            
             if (!success) {
@@ -365,7 +368,8 @@ static int encode_frame(vpx_codec_ctx_t *codec,
         
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
              uint64_t pts=(uint64_t)(presentationTime*1e9);
-            BOOL success= segment->AddFrame((const uint8_t*)pkt->data.frame.buf, pkt->data.frame.sz, 1, pts, flags & VPX_EFLAG_FORCE_KF);
+             const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
+            BOOL success= segment->AddFrame((const uint8_t*)pkt->data.frame.buf, pkt->data.frame.sz, 1, pts, keyframe);
             
             
             if (!success) {
