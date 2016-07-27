@@ -323,7 +323,7 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
             
             uint64_t pts=(uint64_t)(presentationTime*1e9);
             const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
-           BOOL success= segment->AddFrameWithAdditional((const uint8_t*)pkt->data.frame.buf,
+            BOOL success= segment->AddFrameWithAdditional((const uint8_t*)pkt->data.frame.buf,
                                                   pkt->data.frame.sz,
                                                   (const uint8_t*)pkt_alpha->data.frame.buf,
                                                   pkt_alpha->data.frame.sz,
