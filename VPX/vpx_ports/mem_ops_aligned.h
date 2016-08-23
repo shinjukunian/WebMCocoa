@@ -11,7 +11,7 @@
 #ifndef VPX_PORTS_MEM_OPS_ALIGNED_H_
 #define VPX_PORTS_MEM_OPS_ALIGNED_H_
 
-#include "../vpx/vpx_integer.h"
+#include "vpx/vpx_integer.h"
 
 /* \file
  * \brief Provides portable memory access primitives for operating on aligned
@@ -28,8 +28,8 @@
  * could redefine these macros.
  */
 #define swap_endian_16(val,raw) do {\
-    val = ((raw>>8) & 0x00ff) \
-          | ((raw<<8) & 0xff00);\
+    val = (uint16_t)(((raw>>8) & 0x00ff) \
+          | ((raw<<8) & 0xff00));\
   } while(0)
 #define swap_endian_32(val,raw) do {\
     val = ((raw>>24) & 0x000000ff) \
