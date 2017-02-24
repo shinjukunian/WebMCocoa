@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ACC27971E601A03005FB0A0 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACC27961E601A03005FB0A0 /* libvpx.a */; };
 		B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */ = {isa = PBXBuildFile; fileRef = B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */ = {isa = PBXBuildFile; fileRef = B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */; };
 		B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */; };
@@ -17,7 +18,6 @@
 		B76B43391D6C662800EF414C /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B76B43361D6C662800EF414C /* video_common.h */; };
 		B76B43421D6C683100EF414C /* vpx_config.h in Headers */ = {isa = PBXBuildFile; fileRef = B76B43401D6C683100EF414C /* vpx_config.h */; };
 		B76B43431D6C683100EF414C /* vpx_version.h in Headers */ = {isa = PBXBuildFile; fileRef = B76B43411D6C683100EF414C /* vpx_version.h */; };
-		B76B43451D6C683E00EF414C /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B76B43441D6C683E00EF414C /* libvpx.a */; };
 		B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */; };
 		B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */; };
 		B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706D001D3E266D00BE5D56 /* libwebm.a */; };
@@ -29,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACC27961E601A03005FB0A0 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvpx.a; sourceTree = "<group>"; };
 		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPXEncoder2.h; sourceTree = "<group>"; };
 		B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VPXEncoder2.mm; sourceTree = "<group>"; };
 		B72FF4831D3CD3F100EF85E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -43,7 +44,6 @@
 		B76B433F1D6C67BC00EF414C /* PATENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
 		B76B43401D6C683100EF414C /* vpx_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_config.h; sourceTree = "<group>"; };
 		B76B43411D6C683100EF414C /* vpx_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpx_version.h; sourceTree = "<group>"; };
-		B76B43441D6C683E00EF414C /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvpx.a; sourceTree = "<group>"; };
 		B7706CFD1D3E266D00BE5D56 /* libmkvmuxer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkvmuxer.a; path = WebM/libmkvmuxer.a; sourceTree = "<group>"; };
 		B7706CFE1D3E266D00BE5D56 /* libmkvparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkvparser.a; path = WebM/libmkvparser.a; sourceTree = "<group>"; };
 		B7706D001D3E266D00BE5D56 /* libwebm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebm.a; path = WebM/libwebm.a; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			files = (
 				B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */,
 				B72FF4841D3CD3F100EF85E2 /* Accelerate.framework in Frameworks */,
-				B76B43451D6C683E00EF414C /* libvpx.a in Frameworks */,
+				5ACC27971E601A03005FB0A0 /* libvpx.a in Frameworks */,
 				B7706D041D3E266D00BE5D56 /* libwebm.a in Frameworks */,
 				B7706D011D3E266D00BE5D56 /* libmkvmuxer.a in Frameworks */,
 				B7706D021D3E266D00BE5D56 /* libmkvparser.a in Frameworks */,
@@ -153,7 +153,7 @@
 				B76B43351D6C662800EF414C /* tools_common.h */,
 				B76B43361D6C662800EF414C /* video_common.h */,
 				B774B2941D365145005032A8 /* Info.plist */,
-				B76B43441D6C683E00EF414C /* libvpx.a */,
+				5ACC27961E601A03005FB0A0 /* libvpx.a */,
 			);
 			path = VPX;
 			sourceTree = "<group>";
