@@ -31,7 +31,8 @@ static const char *exec_name;
     double elapsedTimeInSec;
 
     NSURL *outURL;
-    
+    CGSize _outputSize;
+    NSUInteger _frameRate;
     mkvmuxer::MkvWriter mkvWriter;
     mkvmuxer::Segment _muxer_segment;
     
@@ -39,90 +40,111 @@ static const char *exec_name;
 
 
 
-
-
 -(instancetype)initWithURL:(NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha{
+    return [self initWithURL:url framerate:rate size:size preserveAlpha:alpha encoder:VPXEncoderTypeVP8];
+}
+
+-(instancetype)initWithURL:(NSURL *)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha encoder:(VPXEncoderType)encoder{
     self=[super init];
     if (self) {
-        
         outURL=url;
         self.preserveAlpha=alpha;
-        
-        elapsedTimeInSec=0;
-        
-        vpx_codec_enc_cfg_t cfg;
-        keyframe_interval=10;
-        frame_count=0;
-        vpx_codec_err_t res;
-        VpxVideoInfo info = {0};
-        
-        const VpxInterface *encoder = NULL;
-        const int fps = (int)rate;        // TODO(dkovalev) add command line argument
-        const int bitrate = 20000;   // kbit/s TODO(dkovalev) add command line argument
-        
-        encoder = get_vpx_encoder_by_name("vp8");
-        
-        info.codec_fourcc = encoder->fourcc;
-        info.frame_width = size.width;
-        info.frame_height = size.height;
-        info.time_base.numerator = 1;
-        info.time_base.denominator = fps;
-
-        res = vpx_codec_enc_config_default(encoder->codec_interface(), &cfg, 0);
-        if (res){
-            die_codec(&codec, "Failed to get default codec config.");
-        }
-        
-        cfg.g_w = info.frame_width;
-        cfg.g_h = info.frame_height;
-        cfg.g_timebase.num = 1;
-        cfg.g_timebase.den = 1000;
-        cfg.rc_target_bitrate = bitrate;
-        cfg.g_error_resilient =  0;
-        
-        
-        if (!mkvWriter.Open(outURL.fileSystemRepresentation)) {
-            fprintf(stderr, "\n Error while opening output file.\n");
-            
-        }
-        if (!_muxer_segment.Init(&mkvWriter)) {
-            fprintf(stderr, "\n Could not initialize muxer segment!\n");
-            
-        }
-        uint64_t vid_track= _muxer_segment.AddVideoTrack(size.width, size.height, 1);
-        mkvmuxer::VideoTrack* const video =
-        static_cast<mkvmuxer::VideoTrack*>(_muxer_segment.GetTrackByNumber(vid_track));
-        
-        if (vpx_codec_enc_init(&codec, encoder->codec_interface(), &cfg, 0)){
-            die_codec(&codec, "Failed to initialize encoder");
-        }
-        
-        if (!video) {
-            fprintf(stderr, "\n Could not get video track.\n");
-            return 0;
-        }
-        video->set_codec_id(mkvmuxer::Tracks::kVp8CodecId);
-        
-        if (self.preserveAlpha) {
-            video->SetAlphaMode(1);
-            video->set_max_block_additional_id(1);
-
-            if (vpx_codec_enc_init(&codec_alpha, encoder->codec_interface(), &cfg, 0)){
-                die_codec(&codec, "Failed to initialize encoder");
-            }
-            
-        }
- 
-        
+        _outputSize=size;
+        _frameRate=rate;
+        self.encoderType=encoder;
     }
     return self;
 }
 
 
+
+-(void)configureEncoder{
+    elapsedTimeInSec=0;
+    
+    vpx_codec_enc_cfg_t cfg;
+    keyframe_interval=10;
+    frame_count=0;
+    vpx_codec_err_t res;
+    VpxVideoInfo info = {0};
+    
+    const VpxInterface *encoder = NULL;
+    const int fps = (int)_frameRate;        // TODO(dkovalev) add command line argument
+    const int bitrate = 20000;   // kbit/s TODO(dkovalev) add command line argument
+    
+    switch (self.encoderType) {
+        case VPXEncoderTypeVP8:
+             encoder = get_vpx_encoder_by_name("vp8");
+            break;
+        case VPXEncoderTypeVP9:
+            encoder = get_vpx_encoder_by_name("vp9");
+            break;
+        default:
+            break;
+    }
+   
+    
+    info.codec_fourcc = encoder->fourcc;
+    info.frame_width = _outputSize.width;
+    info.frame_height = _outputSize.height;
+    info.time_base.numerator = 1;
+    info.time_base.denominator = fps;
+    
+    res = vpx_codec_enc_config_default(encoder->codec_interface(), &cfg, 0);
+    if (res){
+        die_codec(&codec, "Failed to get default codec config.");
+    }
+    
+    cfg.g_w = info.frame_width;
+    cfg.g_h = info.frame_height;
+    cfg.g_timebase.num = 1;
+    cfg.g_timebase.den = 1000;
+    cfg.rc_target_bitrate = bitrate;
+    cfg.g_error_resilient =  0;
+    
+    
+    if (!mkvWriter.Open(outURL.fileSystemRepresentation)) {
+        fprintf(stderr, "\n Error while opening output file.\n");
+        
+    }
+    if (!_muxer_segment.Init(&mkvWriter)) {
+        fprintf(stderr, "\n Could not initialize muxer segment!\n");
+        
+    }
+    uint64_t vid_track= _muxer_segment.AddVideoTrack(_outputSize.width, _outputSize.height, 1);
+    mkvmuxer::VideoTrack* const video =
+    static_cast<mkvmuxer::VideoTrack*>(_muxer_segment.GetTrackByNumber(vid_track));
+    
+    if (vpx_codec_enc_init(&codec, encoder->codec_interface(), &cfg, 0)){
+        die_codec(&codec, "Failed to initialize encoder");
+    }
+    
+    if (!video) {
+        fprintf(stderr, "\n Could not get video track.\n");
+        //return 0;
+    }
+    video->set_codec_id(mkvmuxer::Tracks::kVp8CodecId);
+    
+    if (self.preserveAlpha) {
+        video->SetAlphaMode(1);
+        video->set_max_block_additional_id(1);
+        
+        if (vpx_codec_enc_init(&codec_alpha, encoder->codec_interface(), &cfg, 0)){
+            die_codec(&codec, "Failed to initialize encoder");
+        }
+        
+    }
+}
+
+
+
+
 -(void)addFrame:(CGImageRef)frame atTime:(NSTimeInterval)time{
     
-    unsigned int maxDimension=(unsigned int)MAX(CGImageGetWidth(frame), CGImageGetHeight(frame));
+    if (codec.name == NULL) {
+        [self configureEncoder];
+    }
     
+    unsigned int maxDimension=(unsigned int)MAX(CGImageGetWidth(frame), CGImageGetHeight(frame));
     unsigned int v=maxDimension; // compute the next highest power of 2 of 32-bit v http://graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2Float
     
     v--;
@@ -279,7 +301,9 @@ static const char *exec_name;
         fprintf(stderr, "Finalization of segment failed.\n");
     mkvWriter.Close();
 
-    
+    if (self.backgroundColor) {
+        CGColorRelease(self.backgroundColor);
+    }
     completion(YES);
     
 }

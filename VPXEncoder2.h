@@ -8,15 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef NS_ENUM(NSUInteger, VPXEncoderType){
+    VPXEncoderTypeVP8,
+    VPXEncoderTypeVP9,
+};
+
+
 @interface VPXEncoder2 : NSObject
 
-
-
 @property BOOL preserveAlpha;
-@property CGColorRef backgroundColor;
+@property (nullable) CGColorRef backgroundColor;
+@property VPXEncoderType encoderType;
 
--(instancetype)initWithURL:(NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha;
--(void)addFrame:(CGImageRef)frame atTime:(NSTimeInterval)time;
--(void)finalizeWithCompletion:(void(^)(BOOL success))completion;
+
+
+-(nonnull instancetype)initWithURL:(nonnull NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha;
+-(nonnull instancetype)initWithURL:(nonnull NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha encoder:(VPXEncoderType)encoder;
+
+-(void)addFrame:(nonnull CGImageRef)frame atTime:(NSTimeInterval)time;
+-(void)finalizeWithCompletion:(void(^_Nonnull)(BOOL success))completion;
 
 @end
