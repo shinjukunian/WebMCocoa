@@ -287,7 +287,14 @@ static const char *exec_name;
 
 -(void)finalizeWithCompletion:(void(^)(BOOL success))completion{
     
-    while (encode_frame(&codec, NULL, -1,0, 0, &(_muxer_segment))) {};
+    if (self.preserveAlpha) {
+        while (encode_frameAlpha(&codec, NULL, &codec_alpha, NULL, -1, 0 ,0, &(_muxer_segment))) {};
+    }
+    else{
+        while (encode_frame(&codec, NULL, -1,0, 0, &(_muxer_segment))) {};
+    }
+    
+    
     
     if (vpx_codec_destroy(&codec))
         die_codec(&codec, "Failed to destroy codec.");
