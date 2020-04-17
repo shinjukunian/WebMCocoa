@@ -79,6 +79,8 @@ static const char *exec_name;
             encoder = get_vpx_encoder_by_name("vp9");
             break;
         default:
+            NSLog(@"No Valid decoder selected");
+            abort();
             break;
     }
    
@@ -309,7 +311,7 @@ static const char *exec_name;
     mkvWriter.Close();
 
     if (self.backgroundColor) {
-        CGColorRelease(self.backgroundColor);
+        //CGColorRelease(self.backgroundColor);
     }
     completion(YES);
     
