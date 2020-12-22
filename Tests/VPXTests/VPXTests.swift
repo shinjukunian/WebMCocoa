@@ -156,7 +156,63 @@ class VPXTests: XCTestCase {
 
     
     
+//    func testEncodeOpaqueVP9() throws{
+//        let outURL=URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("TestOpaqueVP9").appendingPathExtension("webm")
+//        
+//        let first=testItems.first?.0
+//        XCTAssertNotNil(first)
+//        
+//        let encoder = VPXEncoder2(url: outURL, framerate: UInt(1/timeInterval), size: CGSize(width: first?.width ?? 0, height: first?.height ?? 0), preserveAlpha: false, encoder: .VP9)
+//        
+//        
+//        for item in testItems{
+//            encoder.addFrame(item.0, atTime: item.1)
+//        }
+//        
+//        encoder.finalize(completion: {success in
+//            XCTAssert(success)
+//        })
+//        
+//        addTeardownBlock {
+//            do{
+//                try FileManager.default.removeItem(at: outURL)
+//            }
+//            catch let error{
+//                XCTFail(error.localizedDescription)
+//            }
+//            
+//        }
+//        
+//    }
     
+//    func testEncodeAlphaVP9() throws{
+//        let outURL=URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("TestOpaque").appendingPathExtension("webm")
+//
+//        let first=testItems.first?.0
+//        XCTAssertNotNil(first)
+//
+//        let encoder = VPXEncoder2(url: outURL, framerate: UInt(1/timeInterval), size: CGSize(width: first?.width ?? 0, height: first?.height ?? 0), preserveAlpha: true, encoder: .VP9)
+//
+//
+//        for item in testItems{
+//            encoder.addFrame(item.0, atTime: item.1)
+//        }
+//
+//        encoder.finalize(completion: {success in
+//            XCTAssert(success)
+//        })
+//
+//        addTeardownBlock {
+//            do{
+//                try FileManager.default.removeItem(at: outURL)
+//            }
+//            catch let error{
+//                XCTFail(error.localizedDescription)
+//            }
+//
+//        }
+//
+//    }
     
 
 }

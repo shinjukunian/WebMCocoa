@@ -58,6 +58,7 @@ static const char *exec_name;
         _outputSize=size;
         _frameRate=rate;
         self.encoderType=encoder;
+        
     }
     return self;
 }
@@ -169,12 +170,19 @@ static const char *exec_name;
         uint8_t *resizedBuffer=(uint8_t*)calloc(v*v*4, 1);
         
         CGContextRef context=CGBitmapContextCreate(resizedBuffer, v, v, CGImageGetBitsPerComponent(frame), v*4, colorSpace, kCGImageAlphaPremultipliedLast);
-        CGContextSetFillColorWithColor(context, self.backgroundColor);
+        CGContextClearRect(context, CGRectMake(0, 0, v, v));
+        
+        
         
         if (self.backgroundColor) {
+            CGContextSetFillColorWithColor(context, self.backgroundColor);
             CGContextFillRect(context, CGRectMake(0, 0, v, v));
-            CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(frame), CGImageGetHeight(frame)), frame);
         }
+        
+        CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(frame), CGImageGetHeight(frame)), frame);
+        
+        
+        
 
         uint8_t *YUV=(uint8_t*)calloc(v*v*2, 1);
         uint8_t *alpha=(uint8_t*)calloc(v*v*2, 1);
@@ -244,6 +252,7 @@ static const char *exec_name;
         if (err!=kvImageNoError) {
             NSLog(@"conversion generation error %zd",err);
         }
+        
         const CGFloat *components=CGColorGetComponents(self.backgroundColor);
         size_t numberOfComponents=CGColorGetNumberOfComponents(self.backgroundColor);
         Pixel_8888 bg={255,255,255,255};
@@ -345,7 +354,7 @@ static int encode_frameAlpha(vpx_codec_ctx_t *codec,
     vpx_codec_iter_t iter_alpha = NULL;
     const vpx_codec_cx_pkt_t *pkt = NULL;
     const vpx_codec_cx_pkt_t *pkt_alpha = NULL;
-     vpx_codec_err_t res = vpx_codec_encode(codec, img, frame_index, 1,
+    vpx_codec_err_t res = vpx_codec_encode(codec, img, frame_index, 1,
                                                  flags, VPX_DL_BEST_QUALITY);
     if (res != VPX_CODEC_OK)
         die_codec(codec, "Failed to encode frame");
@@ -406,8 +415,8 @@ static int encode_frame(vpx_codec_ctx_t *codec,
         got_pkts = 1;
         
         if (pkt->kind == VPX_CODEC_CX_FRAME_PKT) {
-             uint64_t pts=(uint64_t)(presentationTime*1e9);
-             const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
+            uint64_t pts=(uint64_t)(presentationTime*1e9);
+            const int keyframe = (pkt->data.frame.flags & VPX_FRAME_IS_KEY) != 0;
             BOOL success= segment->AddFrame((const uint8_t*)pkt->data.frame.buf, pkt->data.frame.sz, 1, pts, keyframe);
             
             
