@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5A3269DF25888414007B6618 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		5A43EA552591D16B000E9888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/VPX/Info.plist; sourceTree = "<group>"; };
 		5AAEDFC42591CA7800EBCA3A /* WebM.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebM.xcframework; path = Sources/libWebM/WebM.xcframework; sourceTree = "<group>"; };
 		5AE5F7542591C96E006F171E /* libVPX.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libVPX.xcframework; path = Sources/libVPX/libVPX.xcframework; sourceTree = "<group>"; };
 		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder2.h; path = Sources/VPX/VPXEncoder2.h; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		B774B2861D365145005032A8 = {
 			isa = PBXGroup;
 			children = (
+				5A43EA552591D16B000E9888 /* Info.plist */,
 				5A3269DF25888414007B6618 /* Package.swift */,
 				B774B2931D365145005032A8 /* VPX.h */,
 				B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */,
@@ -342,7 +344,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VPX/Info.plist;
+				INFOPLIST_FILE = Sources/VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +367,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VPX/Info.plist;
+				INFOPLIST_FILE = Sources/VPX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
