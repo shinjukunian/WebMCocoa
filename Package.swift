@@ -13,11 +13,12 @@ let package = Package(
     dependencies: [],
     targets: [
         .binaryTarget(name: "WebM", path: "Sources/libWebM/WebM.xcframework"),
+        .binaryTarget(name: "libVPX", path: "Sources/libVPX/libVPX.xcframework"),
         
-        .binaryTarget(name: "libVPX", path: "Sources/libVPX/VPX.xcframework"),
+        .target(name: "VPX", dependencies: ["WebM", "libVPX"], path: nil, exclude: ["Info.plist"], sources: nil, resources: nil, publicHeadersPath: nil, cSettings: nil, cxxSettings: nil, swiftSettings: nil, linkerSettings: [.linkedFramework("Accelerate")]),
         
-        .target(name: "VPXEncoder", dependencies: ["WebM", "libVPX"], path: nil, exclude: [String](), sources: nil, resources: nil, publicHeadersPath: nil, cSettings: [nil], cxxSettings: nil, swiftSettings: nil, linkerSettings: nil),
-            
+        .testTarget(name: "VPXTests", dependencies: ["VPX"], path: nil, exclude: ["Info.plist"], sources: nil, cSettings: nil, cxxSettings: nil, swiftSettings: nil, linkerSettings: nil),
+        
     ]
 )
 

@@ -20,12 +20,14 @@ typedef NS_ENUM(NSUInteger, VPXEncoderType){
 @property (nullable) CGColorRef backgroundColor;
 @property VPXEncoderType encoderType;
 
-
++(nonnull NSString*)version;
 
 -(nonnull instancetype)initWithURL:(nonnull NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha;
 -(nonnull instancetype)initWithURL:(nonnull NSURL*)url framerate:(NSUInteger)rate size:(CGSize)size preserveAlpha:(BOOL)alpha encoder:(VPXEncoderType)encoder;
 
 -(void)addFrame:(nonnull CGImageRef)frame atTime:(NSTimeInterval)time;
 -(void)finalizeWithCompletion:(void(^_Nonnull)(BOOL success))completion;
+
+
 
 @end

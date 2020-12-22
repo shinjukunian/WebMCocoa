@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7C607B2591E29B005F0D9B /* tools_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C60762591E29B005F0D9B /* tools_common.c */; };
+		5A7C607D2591E29B005F0D9B /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A7C60782591E29B005F0D9B /* video_common.h */; };
+		5A7C607E2591E29B005F0D9B /* tools_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A7C60792591E29B005F0D9B /* tools_common.h */; };
+		5A7C60892591E48E005F0D9B /* y4minput.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A7C60872591E48E005F0D9B /* y4minput.h */; };
+		5A7C608A2591E48E005F0D9B /* y4minput.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C60882591E48E005F0D9B /* y4minput.c */; };
+		5A7C60962591E52F005F0D9B /* VPXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C60952591E52F005F0D9B /* VPXTests.swift */; };
+		5A7C60982591E52F005F0D9B /* VPX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B774B2901D365145005032A8 /* VPX.framework */; };
 		5AAEDFC52591CA7800EBCA3A /* WebM.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAEDFC42591CA7800EBCA3A /* WebM.xcframework */; };
 		5AE5F7552591C96E006F171E /* libVPX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5F7542591C96E006F171E /* libVPX.xcframework */; };
 		B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */ = {isa = PBXBuildFile; fileRef = B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,9 +23,27 @@
 		B7C333B81D3F75B2004681EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C333B71D3F75B2004681EF /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5A7C60992591E52F005F0D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B774B2871D365145005032A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B774B28F1D365145005032A8;
+			remoteInfo = VPX;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5A3269DF25888414007B6618 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		5A43EA552591D16B000E9888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/VPX/Info.plist; sourceTree = "<group>"; };
+		5A7C60762591E29B005F0D9B /* tools_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tools_common.c; path = Sources/VPX/tools_common.c; sourceTree = "<group>"; };
+		5A7C60782591E29B005F0D9B /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_common.h; path = Sources/VPX/video_common.h; sourceTree = "<group>"; };
+		5A7C60792591E29B005F0D9B /* tools_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tools_common.h; path = Sources/VPX/tools_common.h; sourceTree = "<group>"; };
+		5A7C60872591E48E005F0D9B /* y4minput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = y4minput.h; path = Sources/VPX/y4minput.h; sourceTree = "<group>"; };
+		5A7C60882591E48E005F0D9B /* y4minput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = y4minput.c; path = Sources/VPX/y4minput.c; sourceTree = "<group>"; };
+		5A7C60932591E52F005F0D9B /* VPXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7C60952591E52F005F0D9B /* VPXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPXTests.swift; sourceTree = "<group>"; };
+		5A7C60972591E52F005F0D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AAEDFC42591CA7800EBCA3A /* WebM.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebM.xcframework; path = Sources/libWebM/WebM.xcframework; sourceTree = "<group>"; };
 		5AE5F7542591C96E006F171E /* libVPX.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libVPX.xcframework; path = Sources/libVPX/libVPX.xcframework; sourceTree = "<group>"; };
 		B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPXEncoder2.h; path = Sources/VPX/VPXEncoder2.h; sourceTree = "<group>"; };
@@ -31,6 +56,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A7C60902591E52F005F0D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A7C60982591E52F005F0D9B /* VPX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B774B28C1D365145005032A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A7C60942591E52F005F0D9B /* VPXTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A7C60952591E52F005F0D9B /* VPXTests.swift */,
+				5A7C60972591E52F005F0D9B /* Info.plist */,
+			);
+			path = VPXTests;
+			sourceTree = "<group>";
+		};
 		B72FF4821D3CD3F100EF85E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +120,13 @@
 				B774B2931D365145005032A8 /* VPX.h */,
 				B72FF47B1D3CC56700EF85E2 /* VPXEncoder2.h */,
 				B72FF47C1D3CC56700EF85E2 /* VPXEncoder2.mm */,
+				5A7C60762591E29B005F0D9B /* tools_common.c */,
+				5A7C60792591E29B005F0D9B /* tools_common.h */,
+				5A7C60782591E29B005F0D9B /* video_common.h */,
+				5A7C60882591E48E005F0D9B /* y4minput.c */,
+				5A7C60872591E48E005F0D9B /* y4minput.h */,
 				B7706CFC1D3E261A00BE5D56 /* WebM */,
+				5A7C60942591E52F005F0D9B /* VPXTests */,
 				B774B2911D365145005032A8 /* Products */,
 				B72FF4821D3CD3F100EF85E2 /* Frameworks */,
 			);
@@ -89,6 +137,7 @@
 			children = (
 				B774B2901D365145005032A8 /* VPX.framework */,
 				B777A2BD1D3F822200F80A38 /* VPXiOS.framework */,
+				5A7C60932591E52F005F0D9B /* VPXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B774B2951D365145005032A8 /* VPX.h in Headers */,
+				5A7C607E2591E29B005F0D9B /* tools_common.h in Headers */,
 				B72FF47D1D3CC56700EF85E2 /* VPXEncoder2.h in Headers */,
+				5A7C607D2591E29B005F0D9B /* video_common.h in Headers */,
+				5A7C60892591E48E005F0D9B /* y4minput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +167,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5A7C60922591E52F005F0D9B /* VPXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A7C609B2591E52F005F0D9B /* Build configuration list for PBXNativeTarget "VPXTests" */;
+			buildPhases = (
+				5A7C608F2591E52F005F0D9B /* Sources */,
+				5A7C60902591E52F005F0D9B /* Frameworks */,
+				5A7C60912591E52F005F0D9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A7C609A2591E52F005F0D9B /* PBXTargetDependency */,
+			);
+			name = VPXTests;
+			productName = VPXTests;
+			productReference = 5A7C60932591E52F005F0D9B /* VPXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B774B28F1D365145005032A8 /* VPX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B774B2981D365145005032A8 /* Build configuration list for PBXNativeTarget "VPX" */;
@@ -156,9 +226,13 @@
 		B774B2871D365145005032A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "telethon k.k.";
 				TargetAttributes = {
+					5A7C60922591E52F005F0D9B = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					B774B28F1D365145005032A8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DVQ96RL2KL;
@@ -188,11 +262,19 @@
 			targets = (
 				B774B28F1D365145005032A8 /* VPX */,
 				B777A2BC1D3F822200F80A38 /* VPXiOS */,
+				5A7C60922591E52F005F0D9B /* VPXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A7C60912591E52F005F0D9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B777A2BB1D3F822200F80A38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,11 +285,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A7C608F2591E52F005F0D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A7C60962591E52F005F0D9B /* VPXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B774B28B1D365145005032A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7C608A2591E48E005F0D9B /* y4minput.c in Sources */,
 				B72FF47E1D3CC56700EF85E2 /* VPXEncoder2.mm in Sources */,
+				5A7C607B2591E29B005F0D9B /* tools_common.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +312,70 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5A7C609A2591E52F005F0D9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B774B28F1D365145005032A8 /* VPX */;
+			targetProxy = 5A7C60992591E52F005F0D9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5A7C609C2591E52F005F0D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DVQ96RL2KL;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = VPXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5A7C609D2591E52F005F0D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DVQ96RL2KL;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = VPXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.VPXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		B774B2961D365145005032A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +601,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A7C609B2591E52F005F0D9B /* Build configuration list for PBXNativeTarget "VPXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A7C609C2591E52F005F0D9B /* Debug */,
+				5A7C609D2591E52F005F0D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B774B28A1D365145005032A8 /* Build configuration list for PBXProject "VPX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

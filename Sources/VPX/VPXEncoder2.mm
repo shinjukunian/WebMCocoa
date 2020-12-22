@@ -12,10 +12,11 @@
 #import <libVPX/vpx/vpx_encoder.h>
 #import <libVPX/vpx/vpx_codec.h>
 #import <libVPX/vpx/vp8cx.h>
-#import <libVPX/tools_common.h>
-#import <libVPX/video_common.h>
+
 #import <WebM/mkvmuxer.hpp>
 #import <WebM/mkvwriter.hpp>
+#import "tools_common.h"
+#import "video_common.h"
 
 static const char *exec_name;
 
@@ -36,6 +37,11 @@ static const char *exec_name;
     mkvmuxer::MkvWriter mkvWriter;
     mkvmuxer::Segment _muxer_segment;
     
+}
+
++(nonnull NSString*)version{
+    
+    return [NSString stringWithCString:vpx_codec_version_str() encoding:NSASCIIStringEncoding];
 }
 
 
