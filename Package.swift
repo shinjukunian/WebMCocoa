@@ -17,7 +17,7 @@ let package = Package(
         
         .target(name: "VPX", dependencies: ["WebM", "libVPX"], path: nil, exclude: ["Info.plist"], sources: nil, resources: nil, publicHeadersPath: nil, cSettings: nil, cxxSettings: nil, swiftSettings: nil, linkerSettings: [.linkedFramework("Accelerate")]),
         
-        .testTarget(name: "VPXTests", dependencies: ["VPX"], path: nil, exclude: ["Info.plist"], sources: nil, cSettings: nil, cxxSettings: nil, swiftSettings: nil, linkerSettings: nil),
+        .testTarget(name: "VPXTests", dependencies: ["VPX"], path: nil, exclude: ["Info.plist", "testData"], sources: nil, cSettings: nil, cxxSettings: nil, swiftSettings: nil, linkerSettings: nil),
         
     ]
 )
