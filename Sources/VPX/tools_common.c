@@ -17,12 +17,12 @@
 #include "./tools_common.h"
 
 #if CONFIG_VP8_ENCODER || CONFIG_VP9_ENCODER
-#include <libVPX/vpx/vp8cx.h>
+#include <vpx/vp8cx.h>
 
 #endif
 
 #if CONFIG_VP8_DECODER || CONFIG_VP9_DECODER
-#include <libVPX/vpx/vp8dx.h>
+#include <vpx/vp8dx.h>
 #endif
 
 #if defined(_WIN32) || defined(__OS2__)

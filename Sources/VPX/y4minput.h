@@ -15,7 +15,7 @@
 #define VPX_Y4MINPUT_H_
 
 #include <stdio.h>
-#include <libVPX/vpx/vpx_image.h>
+#include <vpx/vpx_image.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <libVPX/vpx/vpx_integer.h>
+#include <vpx/vpx_integer.h>
 #include "y4minput.h"
 
 // Reads 'size' bytes from 'file' into 'buf' with some fault tolerance.

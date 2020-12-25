@@ -9,12 +9,12 @@
 #import "VPXEncoder2.h"
 #import <Accelerate/Accelerate.h>
 
-#import <libVPX/vpx/vpx_encoder.h>
-#import <libVPX/vpx/vpx_codec.h>
-#import <libVPX/vpx/vp8cx.h>
+#import <vpx/vpx_encoder.h>
+#import <vpx/vpx_codec.h>
+#import <vpx/vp8cx.h>
 
-#import <WebM/mkvmuxer.hpp>
-#import <WebM/mkvwriter.hpp>
+#import <mkvmuxer.hpp>
+#import <mkvwriter.hpp>
 #import "tools_common.h"
 #import "video_common.h"
 

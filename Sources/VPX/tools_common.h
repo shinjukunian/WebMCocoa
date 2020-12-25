@@ -12,10 +12,10 @@
 
 #include <stdio.h>
 
-#include <libVPX/vpx/vpx_config.h>
-#import <libVPX/vpx/vpx_codec.h>
-#import <libVPX/vpx/vpx_image.h>
-#import <libVPX/vpx/vpx_integer.h>
+#include <vpx/vpx_config.h>
+#import <vpx/vpx_codec.h>
+#import <vpx/vpx_image.h>
+#import <vpx/vpx_integer.h>
 
 
 #if CONFIG_ENCODERS
