@@ -16,6 +16,9 @@
 ## change the output directory.
 ##
 ## This script is based on iosbuild.sh from the libwebp project.
+
+## rename the folder to libwebm and run this script in the main directory next to iosbuild.sh
+
 . $(dirname $0)/common/common.sh
 
 # Trap function. Cleans up build output.
@@ -181,7 +184,7 @@ for PLATFORM in ${PLATFORMS}; do
   SDKROOT="${PLATFORMSROOT}/"
   SDKROOT="${SDKROOT}${PLATFORM}.platform/Developer/SDKs/${PLATFORM}.sdk/"
   CXXFLAGS="-arch ${ARCH2:-${ARCH}} -isysroot ${SDKROOT} ${OPT_FLAGS}
-            -stdlib=libc++ -mmacosx-version-min=10.10"
+            -stdlib=libc++ -mmacosx-version-min=10.10 -std=c++11"
 
   # Build using the legacy makefile (instead of generating via cmake).
   eval make -f Makefile.unix libwebm.a CXXFLAGS=\"${CXXFLAGS}\" ${devnull}
